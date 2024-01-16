@@ -67,8 +67,6 @@ function startApplication(datas:Datas[]){
     recuperationBoutonsClique.forEach(bouton=>{
         bouton.addEventListener("click",function(){
             const classeBoutonClique = bouton.textContent;
-            console.log("classeBoutonClique:", classeBoutonClique);
-            console.log("randomPays.name:", randomPays.name);
             if(classeBoutonClique===randomPays.name){
                 recuperationResultat.innerHTML="Bravo vous avez trouvé la bonne réponse"
                
@@ -77,9 +75,7 @@ function startApplication(datas:Datas[]){
                 
             }
             if (!creationDeBoutonAppele) {
-                // Appelez la fonction ici si elle n'a pas encore été appelée
                 creationDeBouton();
-                // Marquez la fonction comme appelée
                 creationDeBoutonAppele = true;
             }
         })
